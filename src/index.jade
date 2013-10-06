@@ -5,10 +5,12 @@ html(lang="en" ng-app="maej")
     script(type='text/javascript' src="http://cdn.staticfile.org/angular.js/1.1.5/angular.min.js")
     script(type='text/javascript' src="./js/app.js")
     script(type='text/javascript' src="http://cdn.staticfile.org/angular.js/1.1.5/angular-resource.min.js")
+    script(type='text/javascript' src="http://jsrun.it/assets/A/u/x/7/Aux7D")
 
   body
     h1 Hello Maej!
-    #container.col
+    #header(ng-controller="UserCtrl")
       p.
-        {{'hello jade and angularJS!'}}
+        {{'Hello oos.pw!'}}
+
     #container1(ng-view)

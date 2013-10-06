@@ -1,4 +1,13 @@
-angular.module('maej', []).
+connect = {
+  uri:"http://api.oos.pw"
+}
+angular.module('request', ['ngResource','ngCookies']).
+    factory('Request', function($resource){
+      return {
+      	
+      }
+    })
+angular.module('maej', ['ngCookies']).
   config(['$routeProvider', ($routeProvider)->
 	  $routeProvider.
 	  	  when('/steams', {templateUrl: 'steam.html'}, controller: SteamCtrl).
@@ -6,10 +15,12 @@ angular.module('maej', []).
 	      when('/user/:userId', {templateUrl: 'user-detail.html', controller: UserCtrl}).
 	      otherwise({redirectTo: '/steams'})
 ])
-UserCtrl= ($scope, $routeParams)-> 
+UserCtrl= ($scope, $routeParams, $cookies, "request")-> 
+  login = $cookies.myFavorite
   $scope.orderProp = 'age'
-
-
-SteamCtrl= ($scope, $routeParams)->
+  this
+SteamCtrl= ($scope, $routeParams, $cookies, "request")->
   $scope.wait = "10"
   $scope.num = 15
+  this
+
