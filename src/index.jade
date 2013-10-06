@@ -1,0 +1,14 @@
+doctype 5
+html(lang="en" ng-app="maej")
+  head
+    title pas
+    script(type='text/javascript' src="http://cdn.staticfile.org/angular.js/1.1.5/angular.min.js")
+    script(type='text/javascript' src="./js/app.js")
+    script(type='text/javascript' src="http://cdn.staticfile.org/angular.js/1.1.5/angular-resource.min.js")
+
+  body
+    h1 Hello Maej!
+    #container.col
+      p.
+        {{'hello jade and angularJS!'}}
+    #container1(ng-view)
