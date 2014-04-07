@@ -5,21 +5,59 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
   <script type="text/x-handlebars">
-    <h2>Welcome to oos.pw</h2>
+    <div id="navi">
     <ul>
-    <li>{{#link-to 'discovery'}}Discovery{{/link-to}}</li>
-    <li>{{#link-to 'steams'}}Steams{{/link-to}}</li>
+      <li class="title" style="font-size:46px;">∞</li>
+      <li>{{#link-to 'discovery'}}discovery{{/link-to}}</li>
+      <li>{{#link-to 'steams'}}my steam{{/link-to}}</li>
     </ul>
+    <ul>
+      <li class="title"><i class="fa fa-dashboard"></i></li>
+      <li>{{#link-to 'discovery'}}username{{/link-to}}</li>
+      <li>{{#link-to 'steams'}}new drop{{/link-to}}</li>
+      <li>{{#link-to 'steams'}}settings{{/link-to}}</li>
+      <li>{{#link-to 'steams'}}logout{{/link-to}}</li>
+    </ul>
+    <ul>
+      <li class="title"><i class="fa fa-road"></i></li>
+      <li>{{#link-to 'discovery'}}about us{{/link-to}}</li>
+      <li>{{#link-to 'steams'}}join us{{/link-to}}</li>
+    </ul>
+    </div>
     {{outlet}}
   </script>
   <script type="text/x-handlebars" id="discovery">
-    <h1>Hello oos.pw</h1>
+    <div class="app title">
+      oos.pw
+      <small>discovery, the whole steam</small>
+    </div>
+    <div class="steam container">
+      <section>
+        <ul class="drop actions">
+          <li class="drop action"><a class="action to like"><i class="fa fa-dashboard"></i></a></li>
+          <li class="drop action"><a class="action to dislike"><i class="fa fa-dashboard"></i></a></li>
+          <li class="drop action"><a class="action to retweet"><i class="fa fa-dashboard"></i></a></li>
+          <li class="drop action"><a class="action to comments"><i class="fa fa-dashboard"></i></a></li>
+        </ul>
+        <div class="drop text">
+          <p>由于找不到好的方案，决定自己动手写一个。我的目的比较明确，这个Gem是帮助开发者方便地在已有的Rails app中集成微信的消息机制，同时提供命令行程序帮助日常的维护，比如更新菜单等。目前还没有在正式的生产环境中使用过，欢迎大家吐槽，参与，让这个项目可以成为每个希望集成微信公众平台的开发者的好工具。</p>
+        </div>
+        <div class="drop producer">
+          <div class="drop producer avatar">
+            <img src="http://ruby-china.org/avatar/aaa.png?s=96&d=404" />
+          </div>
+          <div class="drop producer name">username</div>
+          <div class="drop falling time">at somewhen</div>
+        </div>
+      </section>
+    </div>
   </script>
   <script type="text/x-handlebars" id="steams">
-    <h1>Hello oos.pw</h1>
+
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
