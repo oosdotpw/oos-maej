@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    meta charset="utf-8" 
+    title
+      |{{title}}
+    link href="css/normalize.css" rel="stylesheet" 
+    link href="css/style.css" rel="stylesheet" 
+    link href="css/font-awesome.min.css" rel="stylesheet" 
+  body
+    script type="text/x-handlebars" 
+      #navi
+        ul
+          li.title style="font-size:46px;"  ∞
+          li
+            |{{#link-to 'discovery'}}discovery{{/link-to}} 
+          li
+            |{{#link-to 'steams'}}my steam{{/link-to}} 
+        ul
+          li.title
+            i.fa.fa-dashboard
+          li
+            |{{#link-to 'discovery'}}username{{/link-to}} 
+          li
+            |{{#link-to 'steams'}}new drop{{/link-to}} 
+          li
+            |{{#link-to 'steams'}}settings{{/link-to}} 
+          li
+            |{{#link-to 'steams'}}logout{{/link-to}} 
+        ul
+          li.title
+            i.fa.fa-road
+          li
+            |{{#link-to 'discovery'}}about us{{/link-to}} 
+          li
+            |{{#link-to 'steams'}}join us{{/link-to}} 
+      .app.title
+        | oos.pw
+      | {{outlet}}
+    script#discovery type="text/x-handlebars" 
+      .steam.container
+        section
+          ul.drop.actions
+            li.drop.action
+              a.action.to.like
+                i.fa.fa-dashboard
+            li.drop.action
+              a.action.to.dislike
+                i.fa.fa-dashboard
+            li.drop.action
+              a.action.to.retweet
+                i.fa.fa-dashboard
+            li.drop.action
+              a.action.to.comments
+                i.fa.fa-dashboard
+          .drop.text
+            p 由于找不到好的方案，决定自己动手写一个。我的目的比较明确，这个Gem是帮助开发者方便地在已有的Rails app中集成微信的消息机制，同时提供命令行程序帮助日常的维护，比如更新菜单等。目前还没有在正式的生产环境中使用过，欢迎大家吐槽，参与，让这个项目可以成为每个希望集成微信公众平台的开发者的好工具。
+          .drop.producer
+            .drop.producer.avatar
+              img src="http://ruby-china.org/avatar/aaa.png?s=96&d=404" 
+            .drop.producer.name username
+            .drop.falling.time at somewhen
+    script#steams type="text/x-handlebars" 
+    script src="js/libs/jquery-1.10.2.js" 
+    script src="js/libs/handlebars-1.1.2.js" 
+    script src="js/libs/ember-1.5.0.js" 
+    script src="js/app.js" 
