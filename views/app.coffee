@@ -11,9 +11,7 @@ window.App.DiscoveryRoute = Ember.Route.extend({
     controller.set('title', "Discover oos.pw!")
 })
 
-$(document).ready(() ->
+$(document).ready ->
 	$("#navi").toggle()
-	$(".app.title").click(() ->
+	$(".app.title").click ->
 		$("#navi").toggle()
-	)
-)
